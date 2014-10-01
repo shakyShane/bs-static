@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>BrowserSync Control Panel</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/core.css"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+    <h1 class="site-title alt">
+        <a href="/">BrowserSync</a> - <span><a href="/">Control Panel</a></span>
+    </h1>
+</header>
+
+<main class="main">
+    <nav class="section-nav" id="section-nav">
+        <ul class="">
+            <li>
+                <button class="section-button">Server Info</button>
+            </li>
+            <li>
+                <button class="section-button">Options</button>
+            </li>
+            <li>
+                <button class="section-button">Locations</button>
+            </li>
+            <li>
+                <button class="section-button">Plugins <span>(2)</span></button>
+            </li>
+            <li>
+                <button class="section-button menu-close">CLOSE</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-toggle">
+        <button class="button menu-button">Menu</button>
+    </div>
+
+    <section class="content">
+
+        <h1>SERVER INFO</h1>
+        <ul class="info-list">
+            <li>
+                <p><b>Localhost address:</b></p>
+                <p class="recede">This computer</p>
+                <p><a href="http://localhost:3000">http://localhost:3000</a></p>
+            </li>
+            <li>
+                <p><b>External addresses:</b></p>
+                <p class="recede">Other devices on the same wifi network</p>
+                <p><a href="http://192.168.0.1:3000">http://192.168.0.1:3000</a></p>
+                <p><a href="http://192.168.0.65:3000">http://192.168.0.65:3000</a></p>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer class="site-footer">
+    <p>BrowserSync</p>
+</footer>
+<code>
+    clicking on ".menu-button" adds class "active" on "#section-nav, .menu-button"
+    clicking on ".menu-close" removes class "active" on "#section-nav, .menu-button"
+    clicking on ".info-button" toggles class "active" on "#server-info, .info-button"
+</code>
+<script src="js/app.js"></script>
+</body>
+</html>
