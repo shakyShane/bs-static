@@ -1,9 +1,11 @@
-###BrowserSync Control panel - playground
+##BrowserSync Control panel - playground
 
 The purpose of this repository is allow front-end designers/developers to work on the styling elements of 
  the upcoming BrowserSync control panel.
  
 It's just HTML/CSS (using sass), so feel free to pull it down and have a go at reworking the CSS.
+
+You can preview it now by visiting [http://shakyshane.github.io/bs-static/](http://shakyshane.github.io/bs-static/)
 
 ##Browser Support
 We're only targeting latest Chrome/Safari/Firefox, so use all the modern techniques you want.
