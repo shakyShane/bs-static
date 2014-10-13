@@ -12,15 +12,16 @@ We're only targeting latest Chrome/Safari/Firefox, so use all the modern techniq
 
 ##HTML Rules
 It will end up being an Angular JS app, so don't edit the structure too much, you *can* add classes to elements
-or add more markup where needed though.
+or add more markup where needed though. If you're not sure, just ask me.
 
 ##JS
 You should not use any Javascript at all. `uilang` is used to provide the `.active` class toggles, but you should 
-not edit these or add any others.
+not edit these or add any others. (as none of it will be used in the actual app)
 
 ##CSS/SASS
 You are free to do whatever you like with the SASS files, restructure them or even start from scratch if you like.
-
+All existing style were only put in place to give me something to start building the back-end on - so feel
+  bad if you want to rip it all out and start again. :)
 
 #Install
 
