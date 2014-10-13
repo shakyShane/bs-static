@@ -9,8 +9,8 @@ $button-bg: white;
     line-height: 1.2;
     text-align: center;
     cursor: pointer;
-    background: white;
-    border: 1px solid #E0E0E0;
+    background: $white;
+    border: 1px solid $border;
 
 
     &:hover,
@@ -20,7 +20,7 @@ $button-bg: white;
     }
 
     &:active {
-        background: white;
+        background: $white;
     }
 
     + .button,
@@ -33,7 +33,7 @@ $button-bg: white;
     @extend %button;
 
     span {
-        color: grey;
+        color: $grey;
     }
 }
 
@@ -43,7 +43,7 @@ $button-bg: white;
     width: 100%;
 
     span {
-        color: grey;
+        color: $grey;
     }
 }
 
@@ -53,7 +53,7 @@ $button-bg: white;
     text-align: left;
 
     span {
-        color: grey;
+        color: $grey;
     }
 
     &.active {
@@ -63,7 +63,7 @@ $button-bg: white;
 
 .menu-close {
 
-    color: grey;
+    color: $grey;
     background: darken($button-bg, 2%);
 
     @include media-query(min, $desk-start) {

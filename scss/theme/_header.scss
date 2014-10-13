@@ -1,3 +1,6 @@
+/**
+ * Site Header bar
+ */
 .site-header {
 
     background: $navy;
@@ -6,16 +9,15 @@
     text-align: center;
     z-index: 2;
 
-//    @include media-query(min, $lap-start) {
-//        text-align: left;
-//    }
-
     &.alt {
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
+/**
+ * Title text
+ */
 .site-title {
 
     @include font-size(20px);

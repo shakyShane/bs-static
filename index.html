@@ -34,6 +34,9 @@
                 <button class="section-button" id="locations-trigger">Locations</button>
             </li>
             <li>
+                <button class="section-button" id="plugins-trigger">Plugins (2)</button>
+            </li>
+            <li>
                 <button class="section-button menu-close">CLOSE</button>
             </li>
         </ul>
@@ -115,6 +118,25 @@
                 </li>
             </ul>
         </article>
+        <article class="main-section" id="plugins">
+            <h1>Plugins</h1>
+            <ul class="options-list">
+                <li>
+                    <p class="lede">HTML Injector</p>
+                    <label>
+                        <input type="checkbox"> Enabled
+                    </label>
+                </li>
+            </ul>
+            <ul class="options-list">
+                <li>
+                    <p class="lede">HTML Validator</p>
+                    <label>
+                        <input type="checkbox"> Enabled
+                    </label>
+                </li>
+            </ul>
+        </article>
         <article class="main-section active" id="server-info">
             <h1>Server Info</h1>
             <div>
@@ -149,11 +171,13 @@
     clicking on ".menu-button" adds class "active" on "#section-nav, .menu-button"
     clicking on ".menu-close" removes class "active" on "#section-nav, .menu-button"
     clicking on "#server-info-trigger" adds class "active" on "#server-info, #server-info-trigger"
-    clicking on "#server-info-trigger" removes class "active" on "#section-nav, .menu-button, #ghostmode, #locations, #ghostmode-trigger, #locations-trigger"
+    clicking on "#server-info-trigger" removes class "active" on "#section-nav, .menu-button, #ghostmode, #locations, #plugins, #ghostmode-trigger, #locations-trigger, #plugins-trigger"
     clicking on "#ghostmode-trigger" adds class "active" on "#ghostmode, #ghostmode-trigger"
-    clicking on "#ghostmode-trigger" removes class "active" on "#server-info, #locations, #section-nav, #server-info-trigger, #locations-trigger, .menu-button"
+    clicking on "#ghostmode-trigger" removes class "active" on "#server-info, #locations, #section-nav, #plugins, #server-info-trigger, #locations-trigger, .menu-button, #plugins-trigger"
     clicking on "#locations-trigger" adds class "active" on "#locations, #locations-trigger"
-    clicking on "#locations-trigger" removes class "active" on "#server-info, #ghostmode, #section-nav, .menu-button, #server-info-trigger, #ghostmode-trigger"
+    clicking on "#locations-trigger" removes class "active" on "#server-info, #ghostmode, #section-nav, #plugins, .menu-button, #server-info-trigger, #ghostmode-trigger, #plugins-trigger"
+    clicking on "#plugins-trigger" adds class "active" on "#plugins, #plugins-trigger"
+    clicking on "#plugins-trigger" removes class "active" on "#server-info, #ghostmode, #section-nav, #locations, .menu-button, #server-info-trigger, #ghostmode-trigger, #locations-trigger"
 </code>
 <script src="js/app.js"></script>
 </body>
