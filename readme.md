@@ -27,13 +27,20 @@ You are free to do whatever you like with the SASS files, restructure them or ev
 Clone this repo
 
 ```bash
-git clone git@github.com:shakyShane/bs-static.git
+$ git clone git@github.com:shakyShane/bs-static.git
 ```
 
 and then, inside the newly created directory, install the tools by running:
 
 ```bash
-sudo npm install -g gulp && npm install
+$ sudo npm install -g gulp && npm install
+```
+
+#Develop
+To have your SASS files auto-compiled when you makes changes, just run:
+
+```bash
+$ gulp
 ```
 
 Now you're good to go - have fun!
