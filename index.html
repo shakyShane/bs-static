@@ -21,10 +21,10 @@
     <nav class="section-nav" id="section-nav">
         <ul class="">
             <li>
-                <button class="section-button">Server Info</button>
+                <button class="section-button active" id="server-info-trigger">Server Info</button>
             </li>
             <li>
-                <button class="section-button">Options</button>
+                <button class="section-button" id="ghostmode-trigger">GhostMode Options</button>
             </li>
             <li>
                 <button class="section-button">Locations</button>
@@ -42,21 +42,96 @@
     </div>
 
     <section class="content">
+        <section class="main-section active" id="server-info">
+            <h1>SERVER INFO</h1>
+            <ul class="options-list server-info">
+                <li>
+                    <p class="lede"><b>Localhost address:</b></p>
+                    <p class="recede">This computer</p>
+                    <p><a href="http://localhost:3000">http://localhost:3000</a></p>
+                </li>
+                <li>
+                    <p class="lede"><b>Network address:</b></p>
+                    <p class="recede">Other devices on the same wifi network</p>
+                    <p><a href="http://192.168.0.1:3000">http://192.168.0.1:3000</a></p>
+                    <p><a href="http://192.168.0.65:3000">http://192.168.0.65:3000</a></p>
+                </li>
+            </ul>
+        </section>
 
-        <h1>SERVER INFO</h1>
-        <ul class="info-list">
-            <li>
-                <p><b>Localhost address:</b></p>
-                <p class="recede">This computer</p>
-                <p><a href="http://localhost:3000">http://localhost:3000</a></p>
-            </li>
-            <li>
-                <p><b>External addresses:</b></p>
-                <p class="recede">Other devices on the same wifi network</p>
-                <p><a href="http://192.168.0.1:3000">http://192.168.0.1:3000</a></p>
-                <p><a href="http://192.168.0.65:3000">http://192.168.0.65:3000</a></p>
-            </li>
-        </ul>
+        <section class="main-section" id="ghostmode">
+            <h1>Ghost Mode Options</h1>
+            <ul class="options-list">
+                <li class="tight">
+                    <label>
+                        <input type="checkbox" /> Clicks
+                    </label>
+                </li>
+                <li class="tight">
+                    <label>
+                        <input type="checkbox" /> Scroll
+                    </label>
+                </li>
+                <li class="tight">
+                    <label>
+                        <input type="checkbox" /> Forms (toggles)
+                    </label>
+                </li>
+                <li class="tight">
+                    <label>
+                        <input type="checkbox" /> Forms (Text Inputs)
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="plugins">
+            <h1>Plugins</h1>
+            <ul class="options-list">
+                <li>
+                    <p class="lede">HTML Injector</p>
+                    <label>
+                        <input type="checkbox" /> Enabled
+                    </label>
+                </li>
+            </ul>
+            <ul class="options-list">
+                <li>
+                    <p class="lede">Unique ID Checker</p>
+                    <label>
+                        <input type="checkbox" /> Enabled
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="locations">
+            <h1>Locations</h1>
+            <ul class="options-list">
+                <li>
+                    <p class="lede">Reload all connected Browsers</p>
+                    <button class="button">Reload ALL</button>
+                </li>
+                <li>
+                    <p class="lede">Visit a previous URL</p>
+                    <p>
+                        <select name="" id="">
+                            <option value="">Previously Visited</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button class="button">Go</button>
+                    </p>
+                </li>
+                <li>
+                    <p class="lede">Sync all to a new url:</p>
+                    <p>http://localhost:3000/<p>
+                    <p><input type="text" placeholder/></p>
+                    <button class="button">Go</button>
+                </li>
+            </ul>
+        </section>
+
     </section>
 </main>
 <footer class="site-footer">
@@ -65,7 +140,10 @@
 <code>
     clicking on ".menu-button" adds class "active" on "#section-nav, .menu-button"
     clicking on ".menu-close" removes class "active" on "#section-nav, .menu-button"
-    clicking on ".info-button" toggles class "active" on "#server-info, .info-button"
+    clicking on "#server-info-trigger" adds class "active" on "#server-info"
+    clicking on "#server-info-trigger" removes class "active" on "#section-nav, .menu-button, #ghostmode"
+    clicking on "#ghostmode-trigger" adds class "active" on "#ghostmode"
+    clicking on "#ghostmode-trigger" removes class "active" on "#server-info, #section-nav, .menu-button"
 </code>
 <script src="js/app.js"></script>
 </body>
