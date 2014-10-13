@@ -1,20 +1,20 @@
 var gulp         = require("gulp");
 var sass         = require("gulp-ruby-sass");
 var autoprefix   = require("gulp-autoprefixer");
-var browserSync  = require("/Users/shakyshane/sites/os-browser-sync");
-var htmlInjector = require("/Users/shakyshane/code/bs-plugins/html-injector");
-var cp           = require("/Users/shakyshane/Sites/browser-sync-modules/browser-sync-cp");
+var browserSync  = require("browser-sync");
+var htmlInjector = require("bs-html-injector");
 
 /**
  * Start BrowserSync
  */
 gulp.task('browser-sync', function () {
     gulp.watch("scss/**/*.scss", ['sass']);
-    browserSync.use(htmlInjector, {files: "*.html"});
-    browserSync.use(cp);
     browserSync({
         server: true,
-        files: ["css/**"]
+        files: [
+            "css/**",
+            "index.html"
+        ]
     });
 });
 
