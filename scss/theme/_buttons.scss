@@ -1,25 +1,26 @@
-$button-bg: #283152;
+$button-bg: white;
 %button {
 
     display: inline-block;
-    border: 0;
     padding: $half-spacing $base-spacing;
     width: auto;
     vertical-align: middle;
-    background: $button-bg;
-    color: white;
     @include font-size($base-font-size);
-    border-bottom: 1px solid lighten($navy, 15%);
-
     line-height: 1.2;
     text-align: center;
     cursor: pointer;
+    background: white;
+    border: 1px solid #E0E0E0;
+
 
     &:hover,
     &:focus {
+        background: #ECECEC;
+        outline: 0;
     }
 
     &:active {
+        background: white;
     }
 
     + .button,
@@ -56,14 +57,7 @@ $button-bg: #283152;
     }
 
     &.active {
-        background: $navy;
         font-weight: 700;
-    }
-
-    @include media-query(min, $desk-start) {
-        &:hover {
-            background: $navy;
-        }
     }
 }
 

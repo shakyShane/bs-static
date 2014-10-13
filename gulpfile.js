@@ -12,7 +12,7 @@ gulp.task('browser-sync', function () {
     browserSync({
         server: true,
         files: [
-            "css/**",
+            "css/*.css",
             "index.html"
         ]
     });

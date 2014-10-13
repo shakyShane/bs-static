@@ -1,13 +1,5 @@
-.hidden {
-    display: none;
-    &.active {
-        display: block;
-    }
-}
-
 .main {
-    background: radial-gradient(ellipse farthest-side at 100% 100%, $navy 10%, lighten($navy, 10%) 50%, lighten($navy, 20%) 120%);
-    min-height: 800px;
+    background: $body-bg;
     @extend .clearfix;
 }
 
@@ -20,6 +12,7 @@
     transition: all .3s;
     opacity: 0;
     z-index: 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
 
     @include media-query(min, $desk-start) {
         opacity: 1;
@@ -28,10 +21,23 @@
         float: left;
         width: 25%;
         padding: $half-spacing;
+        box-shadow: 0 0 0 0;
     }
 
     ul {
         margin-bottom: 0;
+    }
+    
+    button {
+        width: 100%;
+        border-bottom: 0;
+        @include media-query(min, $desk-start) {
+            border-bottom: 1px solid #E0E0E0;
+            margin-bottom: $half-spacing/2;
+        }
+    }
+    .menu-close {
+        border-bottom: 1px solid #E0E0E0;
     }
 
     &.active {
@@ -39,9 +45,6 @@
         opacity: 1;
     }
 
-    button {
-        width: 100%;
-    }
 }
 
 .nav-toggle {
@@ -71,22 +74,16 @@
     }
 }
 
-.menu-button {
-    border-left: 1px solid lighten($navy, 15%);
-}
-
-
 .options-list {
 
     @extend .nav;
     @include font-size(18px);
+    border-top: 1px dashed #eeeeee;
 
     li {
         display: block;
-        background: $button-bg;
-        padding: $half-spacing $base-spacing;
         text-align: left;
-        border-bottom: 1px solid lighten($navy, 15%);
+        padding: $half-spacing 0;
 
         &.tight {
 
@@ -99,17 +96,19 @@
             }
         }
     }
+
     label {
         display: block;
     }
+
     .button {
-        background: $navy;
         line-height: $half-spacing;
     }
+
     a {
         display: block;
-        color: $lime;
     }
+
     .recede {
         color: #e6e6e6;
     }

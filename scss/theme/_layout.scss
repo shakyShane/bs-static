@@ -34,21 +34,22 @@
     text-align: center;
 }
 
-
 .content {
 
-    color: $white;
     padding: $half-spacing;
-
     @include media-query(min, $desk-start) {
         float: left;
         width: 75%;
+        padding-left: 0;
     }
 }
 
 .main-section {
 
     display: none;
+    background: white;
+    padding: $base-spacing;
+    border: 1px solid #E0E0E0;
 
     &.active {
         display: block;
